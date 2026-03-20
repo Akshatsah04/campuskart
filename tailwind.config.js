@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -32,7 +32,13 @@ export default {
           800: '#1e293b',
           900: '#0f172a',
           950: '#020617',
-        }
+        },
+        'dark-bg': '#0D0D0D',
+        'dark-surface': '#121212',
+        'dark-surface2': '#1A1A1A',
+        'dark-border': '#262626',
+        'accent-neon': '#00FF9D',
+        'accent-hover': '#00E68A',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

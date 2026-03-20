@@ -11,32 +11,32 @@ const Profile = () => {
 
     return (
         <div className="max-w-4xl mx-auto px-4 py-8">
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-8">
-                <div className="h-32 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+            <div className="bg-dark-surface rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.5)] border border-dark-border overflow-hidden mb-8">
+                <div className="h-32 bg-gradient-to-r from-accent-neon to-[#22C55E]"></div>
                 <div className="px-8 pb-8 relative">
-                    <div className="absolute -top-12 left-8 w-24 h-24 bg-white rounded-full p-1 shadow-md">
+                    <div className="absolute -top-12 left-8 w-24 h-24 bg-dark-bg rounded-full p-1 shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-dark-border">
                         <img src={user.avatar} alt={user.name} className="w-full h-full rounded-full object-cover" />
                     </div>
                     <div className="pt-16 flex justify-between items-start">
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-900">{user.name}</h1>
-                            <p className="text-gray-500">{user.email}</p>
-                            <p className="text-sm text-gray-400 mt-1">Joined {user.joined}</p>
+                            <h1 className="text-2xl font-bold text-white">{user.name}</h1>
+                            <p className="text-gray-400">{user.email}</p>
+                            <p className="text-sm text-gray-500 mt-1">Joined {user.joined}</p>
                         </div>
-                        <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition flex items-center gap-2">
+                        <button className="px-4 py-2 bg-dark-bg border border-dark-border text-gray-300 rounded-lg font-medium hover:bg-accent-neon/10 hover:border-accent-neon hover:text-accent-neon transition-all duration-300 flex items-center gap-2">
                             <Settings size={18} /> Edit Profile
                         </button>
                     </div>
                 </div>
             </div>
 
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <Package className="text-indigo-600" /> Your Listings
+            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.1)]">
+                <Package className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]" /> Your Listings
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 text-center py-12">
-                    <p className="text-gray-500">You haven't listed any items yet.</p>
+                <div className="p-6 bg-dark-surface rounded-xl border border-dark-border text-center py-12 shadow-[0_2px_15px_rgba(0,0,0,0.3)]">
+                    <p className="text-gray-400">You haven't listed any items yet.</p>
                 </div>
             </div>
         </div>

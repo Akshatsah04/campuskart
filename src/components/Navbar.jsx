@@ -10,44 +10,44 @@ const Navbar = () => {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <nav className="sticky top-0 z-50 bg-dark-bg/90 backdrop-blur-md border-b border-dark-border shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-                        <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">C</div>
-                        <span className="font-bold text-xl tracking-tight text-gray-900">Campus<span className="text-indigo-600">Kart</span></span>
+                    <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
+                        <div className="w-8 h-8 bg-accent-neon rounded-lg flex items-center justify-center text-black font-bold text-lg group-hover:shadow-[0_0_12px_rgba(0,255,157,0.5)] transition-all">C</div>
+                        <span className="font-bold text-xl tracking-tight text-white">Campus<span className="text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.3)]">Kart</span></span>
                     </Link>
 
                     {/* Desktop Nav */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link to="/" className={`text-sm font-medium transition-colors ${isActive('/') ? 'text-indigo-600' : 'text-gray-600 hover:text-gray-900'}`}>Home</Link>
-                        <Link to="/market" className={`text-sm font-medium transition-colors ${isActive('/market') ? 'text-indigo-600' : 'text-gray-600 hover:text-gray-900'}`}>Marketplace</Link>
-                        <Link to="/post-item" className={`text-sm font-medium transition-colors ${isActive('/post-item') ? 'text-indigo-600' : 'text-gray-600 hover:text-gray-900'}`}>Sell Item</Link>
+                        <Link to="/" className={`text-sm font-medium transition-all duration-300 ${isActive('/') ? 'text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.5)]' : 'text-gray-400 hover:text-accent-hover hover:drop-shadow-[0_0_8px_rgba(0,230,138,0.5)]'}`}>Home</Link>
+                        <Link to="/market" className={`text-sm font-medium transition-all duration-300 ${isActive('/market') ? 'text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.5)]' : 'text-gray-400 hover:text-accent-hover hover:drop-shadow-[0_0_8px_rgba(0,230,138,0.5)]'}`}>Marketplace</Link>
+                        <Link to="/post-item" className={`text-sm font-medium transition-all duration-300 ${isActive('/post-item') ? 'text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.5)]' : 'text-gray-400 hover:text-accent-hover hover:drop-shadow-[0_0_8px_rgba(0,230,138,0.5)]'}`}>Sell Item</Link>
                     </div>
 
                     {/* Right Section */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <div className="relative">
+                        <div className="relative group">
                             <input
                                 type="text"
                                 placeholder="Search items..."
-                                className="pl-9 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-48 transition-all focus:w-64"
+                                className="pl-9 pr-4 py-2 bg-dark-surface border border-dark-border rounded-full text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-accent-neon focus:border-accent-neon w-48 transition-all duration-300 focus:w-64 focus:shadow-[0_0_10px_rgba(0,255,157,0.3)]"
                             />
-                            <Search className="absolute left-3 top-2.5 text-gray-400" size={16} />
+                            <Search className="absolute left-3 top-2.5 text-gray-500 group-focus-within:text-accent-neon transition-colors" size={16} />
                         </div>
-                        <Link to="/cart" className="relative p-2 text-gray-600 hover:text-indigo-600 transition">
+                        <Link to="/cart" className="relative p-2 text-gray-400 hover:text-accent-neon hover:drop-shadow-[0_0_8px_rgba(0,255,157,0.5)] transition-all duration-300">
                             <ShoppingCart size={20} />
-                            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                            <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full shadow-[0_0_5px_rgba(239,68,68,0.5)]"></span>
                         </Link>
-                        <Link to="/profile" className="p-2 text-gray-600 hover:text-indigo-600 transition">
+                        <Link to="/profile" className="p-2 text-gray-400 hover:text-accent-neon hover:drop-shadow-[0_0_8px_rgba(0,255,157,0.5)] transition-all duration-300">
                             <User size={20} />
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 p-2">
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-400 hover:text-accent-neon hover:drop-shadow-[0_0_8px_rgba(0,255,157,0.5)] p-2 transition-all">
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
@@ -56,13 +56,13 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+                <div className="md:hidden bg-dark-bg/95 backdrop-blur-md border-t border-dark-border absolute w-full left-0 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
                     <div className="px-4 pt-2 pb-4 space-y-2">
-                        <Link to="/" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</Link>
-                        <Link to="/market" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Marketplace</Link>
-                        <Link to="/post-item" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Sell Item</Link>
-                        <Link to="/cart" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Cart</Link>
-                        <Link to="/profile" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Profile</Link>
+                        <Link to="/" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accent-neon hover:bg-dark-surface hover:shadow-[0_0_10px_rgba(0,255,157,0.1)] transition-colors">Home</Link>
+                        <Link to="/market" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accent-neon hover:bg-dark-surface hover:shadow-[0_0_10px_rgba(0,255,157,0.1)] transition-colors">Marketplace</Link>
+                        <Link to="/post-item" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accent-neon hover:bg-dark-surface hover:shadow-[0_0_10px_rgba(0,255,157,0.1)] transition-colors">Sell Item</Link>
+                        <Link to="/cart" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accent-neon hover:bg-dark-surface hover:shadow-[0_0_10px_rgba(0,255,157,0.1)] transition-colors">Cart</Link>
+                        <Link to="/profile" onClick={() => setIsOpen(false)} className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-accent-neon hover:bg-dark-surface hover:shadow-[0_0_10px_rgba(0,255,157,0.1)] transition-colors">Profile</Link>
                     </div>
                 </div>
             )}

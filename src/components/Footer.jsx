@@ -3,57 +3,64 @@ import { Github, Twitter, Instagram, Phone } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-white border-t border-gray-100 py-12">
+        <footer className="bg-dark-bg border-t border-dark-border py-12 relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     <div className="md:col-span-1">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-6 h-6 bg-indigo-600 rounded-md flex items-center justify-center text-white font-bold text-xs">C</div>
-                            <span className="font-bold text-lg tracking-tight text-gray-900">Campus<span className="text-indigo-600">Kart</span></span>
+                        <div className="flex items-center gap-2 mb-4 group">
+                            <div className="w-6 h-6 bg-accent-neon rounded-md flex items-center justify-center text-black font-bold text-xs shadow-[0_0_8px_rgba(0,255,157,0.4)] group-hover:shadow-[0_0_12px_rgba(0,255,157,0.8)] transition-all">C</div>
+                            <span className="font-bold text-lg tracking-tight text-white">Campus<span className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)]">Kart</span></span>
                         </div>
-                        <p className="text-gray-500 text-sm">
+                        <p className="text-gray-400 text-sm">
                             The #1 marketplace for students. Buy, sell, and rent items securely within your campus network.
                         </p>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-gray-900 mb-4">Marketplace</h4>
-                        <ul className="space-y-2 text-sm text-gray-500">
-                            <li className="hover:text-indigo-600 cursor-pointer">All Products</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Textbooks</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Electronics</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Furniture</li>
+                        <h4 className="font-bold text-white mb-4">Marketplace</h4>
+                        <ul className="space-y-2 text-sm text-gray-400">
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">All Products</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Textbooks</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Electronics</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Furniture</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-gray-900 mb-4">Support</h4>
-                        <ul className="space-y-2 text-sm text-gray-500">
-                            <li className="hover:text-indigo-600 cursor-pointer">Help Center</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Safety Tips</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Terms of Service</li>
-                            <li className="hover:text-indigo-600 cursor-pointer">Privacy Policy</li>
+                        <h4 className="font-bold text-white mb-4">Support</h4>
+                        <ul className="space-y-2 text-sm text-gray-400">
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Help Center</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Safety Tips</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Terms of Service</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Privacy Policy</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-gray-900 mb-4">Connect</h4>
+                        <h4 className="font-bold text-white mb-4">Connect</h4>
                         <div className="flex space-x-4">
-
-                            <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+                            <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300">
                                 <Instagram size={18} />
                             </a>
-                            <a href="https://github.com/Akshatsah04/campuskart" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+                            <a href="https://github.com/Akshatsah04/campuskart" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300">
                                 <Github size={18} />
                             </a>
-                            <a href="tel:9060926686" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+                            <button 
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    navigator.clipboard.writeText("9060926686");
+                                    alert("Phone number copied to clipboard!");
+                                }} 
+                                className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300 cursor-pointer outline-none"
+                                title="Copy Phone Number"
+                            >
                                 <Phone size={18} />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-gray-100 text-center text-sm text-gray-400">
+                <div className="pt-8 border-t border-dark-border text-center text-sm text-gray-500">
                     &copy; {new Date().getFullYear()} CampusKart. All rights reserved. Made with ❤️ for students.
                 </div>
             </div>
