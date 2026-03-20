@@ -1,9 +1,9 @@
 import React from 'react';
-import { Github, Twitter, Instagram } from 'lucide-react';
+import { Github, Twitter, Instagram, Phone } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-white border-t border-gray-100 py-12 mt-12">
+        <footer className="bg-white border-t border-gray-100 py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     <div className="md:col-span-1">
@@ -39,14 +39,15 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-gray-900 mb-4">Connect</h4>
                         <div className="flex space-x-4">
-                            <a href="#" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
-                                <Twitter size={18} />
-                            </a>
-                            <a href="#" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+
+                            <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
                                 <Instagram size={18} />
                             </a>
-                            <a href="#" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+                            <a href="https://github.com/Akshatsah04/campuskart" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
                                 <Github size={18} />
+                            </a>
+                            <a href="tel:9060926686" className="p-2 bg-gray-100 rounded-full text-gray-600 hover:bg-indigo-100 hover:text-indigo-600 transition">
+                                <Phone size={18} />
                             </a>
                         </div>
                     </div>
