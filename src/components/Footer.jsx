@@ -38,7 +38,7 @@ const Footer = () => {
 
                     <div>
                         <h4 className="font-bold text-white mb-4">Connect</h4>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 relative">
                             <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300">
                                 <Instagram size={18} />
                             </a>
@@ -49,9 +49,19 @@ const Footer = () => {
                                 onClick={(e) => {
                                     e.preventDefault();
                                     navigator.clipboard.writeText("9060926686");
-                                    alert("Phone number copied to clipboard!");
+                                    const btn = e.currentTarget;
+                                    const originalTitle = btn.getAttribute('title');
+                                    btn.setAttribute('title', 'Copied!');
+                                    const span = document.createElement('span');
+                                    span.textContent = 'Copied!';
+                                    span.className = 'absolute -top-8 right-0 bg-accent-neon text-black text-xs font-bold py-1 px-2 rounded shadow-[0_0_10px_rgba(0,255,157,0.5)] animate-fade-in';
+                                    btn.parentElement.appendChild(span);
+                                    setTimeout(() => {
+                                        span.remove();
+                                        btn.setAttribute('title', originalTitle);
+                                    }, 2000);
                                 }} 
-                                className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300 cursor-pointer outline-none"
+                                className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300 cursor-pointer outline-none relative"
                                 title="Copy Phone Number"
                             >
                                 <Phone size={18} />
