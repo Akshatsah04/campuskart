@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Twitter, Instagram, Phone } from 'lucide-react';
+import logo from '../public/campuskartlogo.PNG';
 
 const Footer = () => {
     return (
@@ -8,8 +9,8 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-8 mb-8">
                     <div className="md:col-span-1">
                         <div className="flex items-center gap-2 mb-4 group">
-                            <div className="w-6 h-6 bg-accent-neon rounded-md flex items-center justify-center text-black font-bold text-xs shadow-[0_0_8px_rgba(0,255,157,0.4)] group-hover:shadow-[0_0_12px_rgba(0,255,157,0.8)] transition-all">C</div>
-                            <span className="font-bold text-lg tracking-tight text-white">Campus<span className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)]">Kart</span></span>
+                            <img src={logo} alt="CampusKart Logo" className="h-8 object-contain group-hover:drop-shadow-[0_0_12px_rgba(0,255,157,0.5)] transition-all rounded-md" />
+                            <span className="font-bold text-lg tracking-tight text-white hidden md:block">Campus<span className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)]">Kart</span></span>
                         </div>
                         <p className="text-gray-400 text-sm">
                             The #1 marketplace for students. Buy, sell, and rent items securely within your campus network.

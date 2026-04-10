@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, User, Search, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from '../public/campuskartlogo.PNG';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <Link to="/" className="flex-shrink-0 flex items-center gap-2 group">
-                        <div className="w-8 h-8 bg-accent-neon rounded-lg flex items-center justify-center text-black font-bold text-lg group-hover:shadow-[0_0_12px_rgba(0,255,157,0.5)] transition-all">C</div>
-                        <span className="font-bold text-xl tracking-tight text-white">Campus<span className="text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.3)]">Kart</span></span>
+                        <img src={logo} alt="CampusKart Logo" className="h-10 object-contain group-hover:drop-shadow-[0_0_12px_rgba(0,255,157,0.5)] transition-all rounded-lg" />
+                        <span className="font-bold text-xl tracking-tight text-white hidden md:block">Campus<span className="text-accent-neon drop-shadow-[0_0_8px_rgba(0,255,157,0.3)]">Kart</span></span>
                     </Link>
 
                     {/* Desktop Nav */}
