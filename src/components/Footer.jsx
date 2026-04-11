@@ -4,46 +4,46 @@ import logo from '../public/campuskartlogo.PNG';
 
 const Footer = () => {
     return (
-        <footer className="bg-dark-bg border-t border-dark-border py-12 relative z-10">
+        <footer className="bg-[var(--color-bg)] border-t border-[var(--color-border)] py-16 relative z-10 mt-12 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid md:grid-cols-4 gap-8 mb-8">
+                <div className="grid md:grid-cols-4 gap-12 mb-12">
                     <div className="md:col-span-1">
                         <div className="flex items-center gap-2 mb-4 group">
                             <img src={logo} alt="CampusKart Logo" className="h-8 object-contain group-hover:drop-shadow-[0_0_12px_rgba(0,255,157,0.5)] transition-all rounded-md" />
-                            <span className="font-bold text-lg tracking-tight text-white hidden md:block">Campus<span className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)]">Kart</span></span>
+                            <span className="font-bold text-lg tracking-tight text-[var(--color-text)] hidden md:block">Campus<span className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)]">Kart</span></span>
                         </div>
-                        <p className="text-gray-400 text-sm">
+                        {/* <p className="text-gray-400 text-sm">
                             The #1 marketplace for students. Buy, sell, and rent items securely within your campus network.
-                        </p>
+                        </p> */}
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-white mb-4">Marketplace</h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">All Products</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Textbooks</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Electronics</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Furniture</li>
+                        <h4 className="font-bold text-[var(--color-text)] mb-6 uppercase text-sm tracking-wider">Marketplace</h4>
+                        <ul className="space-y-3 text-sm text-[var(--color-text-muted)] font-medium">
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">All Products</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Textbooks</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Electronics</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Furniture</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-white mb-4">Support</h4>
-                        <ul className="space-y-2 text-sm text-gray-400">
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Help Center</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Safety Tips</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Terms of Service</li>
-                            <li className="hover:text-accent-neon cursor-pointer transition-colors duration-300 hover:drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]">Privacy Policy</li>
+                        <h4 className="font-bold text-[var(--color-text)] mb-6 uppercase text-sm tracking-wider">Support</h4>
+                        <ul className="space-y-3 text-sm text-[var(--color-text-muted)] font-medium">
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Help Center</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Safety Tips</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Terms of Service</li>
+                            <li className="hover:text-accent-neon cursor-pointer transition-all duration-300 hover:underline underline-offset-4">Privacy Policy</li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-white mb-4">Connect</h4>
+                        <h4 className="font-bold text-[var(--color-text)] mb-6 uppercase text-sm tracking-wider">Connect</h4>
                         <div className="flex space-x-4 relative">
-                            <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300">
+                            <a href="https://www.instagram.com/_campus.kart_?igsh=MTlrMHdvbXJ0ZWg2bg==" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-[var(--color-text-muted)] hover:bg-accent-neon/10 hover:text-accent-neon hover:border-accent-neon hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
                                 <Instagram size={18} />
                             </a>
-                            <a href="https://github.com/Akshatsah04/campuskart" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300">
+                            <a href="https://github.com/Akshatsah04/campuskart" target="_blank" rel="noopener noreferrer" className="p-2 bg-dark-surface border border-dark-border rounded-full text-[var(--color-text-muted)] hover:bg-accent-neon/10 hover:text-accent-neon hover:border-accent-neon hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300">
                                 <Github size={18} />
                             </a>
                             <button 
@@ -62,7 +62,7 @@ const Footer = () => {
                                         btn.setAttribute('title', originalTitle);
                                     }, 2000);
                                 }} 
-                                className="p-2 bg-dark-surface border border-dark-border rounded-full text-gray-400 hover:bg-accent-neon hover:text-black hover:shadow-[0_0_15px_rgba(0,255,157,0.6)] hover:border-transparent transition-all duration-300 cursor-pointer outline-none relative"
+                                className="p-2 bg-dark-surface border border-dark-border rounded-full text-[var(--color-text-muted)] hover:bg-accent-neon/10 hover:text-accent-neon hover:border-accent-neon hover:shadow-[0_0_15px_rgba(34,197,94,0.3)] transition-all duration-300 cursor-pointer outline-none relative"
                                 title="Copy Phone Number"
                             >
                                 <Phone size={18} />
@@ -71,8 +71,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-dark-border text-center text-sm text-gray-500">
-                    &copy; {new Date().getFullYear()} CampusKart. All rights reserved. Made with ❤️ for students.
+                <div className="pt-8 border-t border-[var(--color-border)] text-center text-sm text-[var(--color-text-muted)]">
+                    &copy; {new Date().getFullYear()} Campus<span className="font-bold">Kart</span>. All rights reserved. Made with ❤️ for students.
                 </div>
             </div>
         </footer>

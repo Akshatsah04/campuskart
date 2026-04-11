@@ -40,35 +40,35 @@ const ProductDetails = () => {
 
                 <div className="p-8 flex flex-col justify-between">
                     <div>
-                        <h1 className="text-3xl font-bold text-white mb-2">{product.title}</h1>
+                        <h1 className="text-3xl font-bold text-[var(--color-text)] mb-2">{product.title}</h1>
                         <p className="text-3xl font-bold text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.3)] mb-6">${product.price}</p>
 
-                        <div className="prose text-gray-300 mb-8 leading-relaxed text-sm md:text-base">
+                        <div className="prose text-[var(--color-text-muted)] mb-8 leading-relaxed text-sm md:text-base">
                             <p>{product.description}</p>
                         </div>
 
                         <div className="border-t border-dark-border pt-6">
-                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Seller Info</h3>
+                            <h3 className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">Seller Info</h3>
                             <div className="flex items-center gap-3">
                                 <div className="w-10 h-10 bg-accent-neon/10 rounded-full flex items-center justify-center text-accent-neon font-bold shadow-[0_0_10px_rgba(0,255,157,0.1)]">
                                     {product.seller.name[0]}
                                 </div>
                                 <div>
-                                    <p className="font-medium text-white">{product.seller.name}</p>
-                                    <p className="text-sm text-gray-400">{product.seller.major}, {product.seller.year}</p>
+                                    <p className="font-medium text-[var(--color-text)]">{product.seller.name}</p>
+                                    <p className="text-sm text-[var(--color-text-muted)]">{product.seller.major}, {product.seller.year}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex gap-4 mt-8">
-                        <button className="flex-1 bg-accent-neon text-black py-3 rounded-xl font-bold hover:bg-accent-hover shadow-[0_0_15px_rgba(0,255,157,0.3)] hover:shadow-[0_0_25px_rgba(0,255,157,0.5)] transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                        <button className="flex-1 bg-accent-neon text-[var(--color-bg)] py-3 rounded-xl font-bold hover:bg-accent-hover shadow-[0_0_15px_rgba(0,255,157,0.3)] hover:shadow-[0_0_25px_rgba(0,255,157,0.5)] transition-all duration-300 flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
                             <MessageCircle size={20} /> Contact Seller
                         </button>
-                        <button className="p-3 border border-dark-border rounded-xl text-gray-400 hover:text-red-500 hover:bg-dark-bg hover:border-red-500/50 hover:shadow-[0_0_10px_rgba(239,68,68,0.3)] transition-all duration-300 h-12 w-12 flex items-center justify-center">
+                        <button className="p-3 border border-dark-border rounded-xl text-[var(--color-text-muted)] hover:text-red-500 hover:bg-dark-bg hover:border-red-500/50 hover:shadow-[0_0_10px_rgba(239,68,68,0.3)] transition-all duration-300 h-12 w-12 flex items-center justify-center">
                             <Heart size={20} />
                         </button>
-                        <button className="p-3 border border-dark-border rounded-xl text-gray-400 hover:text-accent-neon hover:bg-dark-bg hover:border-accent-neon/50 hover:shadow-[0_0_10px_rgba(0,255,157,0.3)] transition-all duration-300 h-12 w-12 flex items-center justify-center">
+                        <button className="p-3 border border-dark-border rounded-xl text-[var(--color-text-muted)] hover:text-accent-neon hover:bg-dark-bg hover:border-accent-neon/50 hover:shadow-[0_0_10px_rgba(0,255,157,0.3)] transition-all duration-300 h-12 w-12 flex items-center justify-center">
                             <Share2 size={20} />
                         </button>
                     </div>

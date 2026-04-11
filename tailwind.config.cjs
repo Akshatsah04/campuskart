@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -33,12 +34,12 @@ module.exports = {
           900: '#0f172a',
           950: '#020617',
         },
-        'dark-bg': '#0D0D0D',
-        'dark-surface': '#121212',
-        'dark-surface2': '#1A1A1A',
-        'dark-border': '#262626',
-        'accent-neon': '#00FF9D',
-        'accent-hover': '#00E68A',
+        'dark-bg': 'var(--color-bg)',
+        'dark-surface': 'var(--color-surface)',
+        'dark-surface2': 'var(--color-surface2)',
+        'dark-border': 'var(--color-border)',
+        'accent-neon': 'var(--color-accent)',
+        'accent-hover': 'var(--color-accent-hover)',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

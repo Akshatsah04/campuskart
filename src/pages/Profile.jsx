@@ -1,7 +1,10 @@
 import React from 'react';
-import { Settings, LogOut, Package } from 'lucide-react';
+import { Settings, LogOut, Package, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 
 const Profile = () => {
+    const { isDark, toggleTheme } = useTheme();
+
     const user = {
         name: 'Akshat User',
         email: 'akshat@university.edu',
@@ -19,24 +22,30 @@ const Profile = () => {
                     </div>
                     <div className="pt-16 flex justify-between items-start">
                         <div>
-                            <h1 className="text-2xl font-bold text-white">{user.name}</h1>
-                            <p className="text-gray-400">{user.email}</p>
-                            <p className="text-sm text-gray-500 mt-1">Joined {user.joined}</p>
+                            <h1 className="text-2xl font-bold text-[var(--color-text)] transition-colors duration-300">{user.name}</h1>
+                            <p className="text-[var(--color-text-muted)] transition-colors duration-300">{user.email}</p>
+                            <p className="text-sm text-[var(--color-text-muted)] mt-1 transition-colors duration-300">Joined {user.joined}</p>
                         </div>
-                        <button className="px-4 py-2 bg-dark-bg border border-dark-border text-gray-300 rounded-lg font-medium hover:bg-accent-neon/10 hover:border-accent-neon hover:text-accent-neon transition-all duration-300 flex items-center gap-2">
-                            <Settings size={18} /> Edit Profile
-                        </button>
+                        <div className="flex flex-col sm:flex-row gap-3">
+                            <button onClick={toggleTheme} className="px-4 py-2 bg-dark-bg border border-dark-border text-[var(--color-text)] rounded-lg font-medium hover:bg-accent-neon/10 hover:border-accent-neon hover:text-accent-neon transition-all duration-300 flex items-center gap-2">
+                                {isDark ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-blue-500" />} 
+                                {isDark ? 'Light Mode' : 'Dark Mode'}
+                            </button>
+                            <button className="px-4 py-2 bg-dark-bg border border-dark-border text-[var(--color-text)] rounded-lg font-medium hover:bg-accent-neon/10 hover:border-accent-neon hover:text-accent-neon transition-all duration-300 flex items-center gap-2">
+                                <Settings size={18} /> Edit Profile
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.1)]">
+            <h2 className="text-xl font-bold text-[var(--color-text)] mb-6 flex items-center gap-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.1)] transition-colors duration-300">
                 <Package className="text-accent-neon drop-shadow-[0_0_5px_rgba(0,255,157,0.5)]" /> Your Listings
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="p-6 bg-dark-surface rounded-xl border border-dark-border text-center py-12 shadow-[0_2px_15px_rgba(0,0,0,0.3)]">
-                    <p className="text-gray-400">You haven't listed any items yet.</p>
+                    <p className="text-[var(--color-text-muted)] transition-colors duration-300">You haven't listed any items yet.</p>
                 </div>
             </div>
         </div>
